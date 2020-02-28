@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import PlanetService from '../services/PlanetService';
 import { Loading } from '../components';
+import numbers from '../utils/numbers';
 
 const PlanetStyled = styled.div`
   align-self: center;
@@ -34,13 +35,13 @@ const Planet = () => {
       <PlanetStyled>
         {
           Object.keys(planet).map(function (key, i) {
-            if (key === 'name') return (<TitleStyled>{(planet.name).toUpperCase()}</TitleStyled>)
-            return (<DataStyled>{key.toUpperCase()}: {planet[key]}</DataStyled>)
+            if (key === 'name') return (<TitleStyled key={i}>{(planet.name).toUpperCase()}</TitleStyled>)
+            return (<DataStyled key={i}>{key.toUpperCase()}: {planet[key]}</DataStyled>)
 
           })
         }
       </PlanetStyled>
-      <Link to={`/planets/${Math.floor(Math.random() * (60 - 1) + 1)}`}>Next</Link>
+      <Link to={`/planets/${numbers.random(61, 1)}`}>Next</Link>
     </>
   );
 };
