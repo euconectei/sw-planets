@@ -38,6 +38,10 @@ const Planet = () => {
             if (key === 'name') return (<TitleStyled key={i}>{(planet.name).toUpperCase()}</TitleStyled>)
             return (<DataStyled key={i}>{key.toUpperCase()}: {planet[key]}</DataStyled>)
 
+            // TODO: Criar lista de filmes
+            // TODO: Criar lista de habitantes
+            // TODO: Tratar dia/hora
+
           })
         }
       </PlanetStyled>
