@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import PlanetService from '../services/PlanetService';
-import { Loading } from '../components';
+import { CardData, Loading, Button } from '../components';
+
 import numbers from '../utils/numbers';
-import CardData from '../components/CardData';
 
 const PlanetStyled = styled.div`
   align-self: center;
@@ -54,9 +54,13 @@ const Planet = () => {
         <CardData icon="male" title="Residents" value={planet.residents} />
         <CardData icon="film" title="Films" value={planet.films} />
       </PlanetStyled>
-      <Link to={`/planets/${numbers.random(61, 1)}`}>Next</Link>
+      <Button to={`/planets/${numbers.random(61, 1)}`} value="Next" />
     </>
   );
 };
+
+// TODO: Inserir ícone para gravidade
+// TODO: Listar filmes
+// TODO: Listar residentes
 
 export default Planet;
