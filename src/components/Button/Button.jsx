@@ -12,6 +12,9 @@ const ButtonStyled = styled(Link)`
   width: 100px;
   text-align: center;
   align-self: center;
+
+  color: #B70000;
+  font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
 `;
 
 const Button = ({ to, value }) => (<ButtonStyled to={to}>{value}</ButtonStyled>);

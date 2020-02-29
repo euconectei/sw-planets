@@ -62,10 +62,4 @@ CardData.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
-CardData.defaultProps = {
-  icon: "smile",
-  title: "Título",
-  value: "Valor",
-};
-
 export default CardData;
