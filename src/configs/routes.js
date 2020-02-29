@@ -6,25 +6,19 @@ import {
 } from 'react-router-dom';
 
 import {
-  Home,
-  Planet,
-  Planets,
+  HomePage,
+  PlanetPage,
 } from '../pages';
 import { Loading } from '../components';
 
 const routes = [
   {
     path: '/',
-    component: Home,
-  },
-  {
-    path: '/planets',
-    component: Planets,
+    component: HomePage,
   },
   {
     path: '/planets/:id',
-    component: Planet
-    // component: lazy(Planet)
+    component: PlanetPage
   },
 ];
 

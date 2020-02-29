@@ -1,9 +1,7 @@
-import Home from './Home';
-import Planet from './Planet';
-import Planets from './Planets';
+import HomePage from './HomePage';
+import PlanetPage from './PlanetPage';
 
 export {
-  Home,
-  Planet,
-  Planets,
+  HomePage,
+  PlanetPage,
 }

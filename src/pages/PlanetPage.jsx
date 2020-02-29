@@ -8,7 +8,7 @@ import numbers from '../utils/numbers';
 
 
 
-const Planet = () => {
+const PlanetPage = () => {
   const [planet, setPlanet] = useState({});
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -36,4 +36,4 @@ const Planet = () => {
 // TODO: Listar filmes
 // TODO: Listar residentes
 
-export default Planet;
+export default PlanetPage;
