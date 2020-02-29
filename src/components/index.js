@@ -1,9 +1,9 @@
 import Button from './Button';
-import CardData from './CardData';
+import Card from './Card';
 import Loading from './Loading';
 
 export {
   Button,
-  CardData,
+  Card,
   Loading,
 };

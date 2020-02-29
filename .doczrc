@@ -1,0 +1,4 @@
+{
+  "base": "docs",
+  "dest": "public/docs"
+}

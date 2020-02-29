@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import fontawesome from '@fortawesome/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -54,5 +55,17 @@ const CardData = ({ icon, title, value }) => (
     {value}
   </GroupStyled>
 );
+
+CardData.propTypes = {
+  icon: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+};
+
+CardData.defaultProps = {
+  icon: "smile",
+  title: "Título",
+  value: "Valor",
+};
 
 export default CardData;
