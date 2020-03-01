@@ -4,7 +4,8 @@ import PlanetService from '../services/PlanetService';
 import { Loading, Button, Card } from '../components';
 
 import numbers from '../utils/numbers';
-
+import FilmService from '../services/FilmService';
+import PeopleService from '../services/PeopleService';
 
 
 const PlanetPage = () => {
@@ -15,7 +16,9 @@ const PlanetPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await PlanetService.findOne(id)
+      const data = await PlanetService.findOne(id);
+      data.filmsTitle = await FilmService.findList(data.films);
+      data.residentsName = await PeopleService.findList(data.residents);
       setPlanet(data);
       setLoading(false);
     };
@@ -25,8 +28,7 @@ const PlanetPage = () => {
   const nextPlanet = () => {
     setLoading(true);
     history.push(`/planets/${numbers.random(61, 1)}`);
-    setLoading(false);
-  }
+  };
 
   if (loading) return <Loading />;
 

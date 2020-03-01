@@ -30,7 +30,10 @@ fontawesome.library.add(
 
 const GroupStyled = styled.div`
   border: 2px solid #E7250A;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-column-gap: 5px;
+  padding: 5px;
   margin: 5px;
 
   &:hover {
@@ -39,12 +42,14 @@ const GroupStyled = styled.div`
   }
 `;
 
-const IconStyled = styled.span`
-  display: inline-block;
+const IconStyled = styled.div`
   height: 20px;
   margin-right: 10px;
   text-align: center;
-  width: 20px;
+  width: 30px;
+`;
+
+const DataStyled = styled.div`
 `;
 
 const CardData = ({ icon, title, value }) => (
@@ -52,7 +57,9 @@ const CardData = ({ icon, title, value }) => (
     <IconStyled>
       <FontAwesomeIcon icon={icon} title={title} />
     </IconStyled>
-    {value}
+    <DataStyled>
+      {value}
+    </DataStyled>
   </GroupStyled>
 );
 
