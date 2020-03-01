@@ -50,6 +50,7 @@ const IconStyled = styled.div`
 `;
 
 const DataStyled = styled.div`
+  text-align: left;
 `;
 
 const CardData = ({ icon, title, value }) => (
