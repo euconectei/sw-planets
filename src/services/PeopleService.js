@@ -8,10 +8,15 @@ const PEOPLES_URL = `${BASE_URL}/peoples`;
 
 const PeopleService = {
   findAll: () => Request.get(PEOPLES_URL),
-  findList: list => Promise.all(list.map(async item => {
-    const people = await Request.get(item);
-    return people.name;
-  })),
+  findList: list => {
+    if (list.length === 0) {
+      return ["Unknown"];
+    }
+    return Promise.all(list.map(async item => {
+      const people = await Request.get(item);
+      return people.name;
+    }));
+  },
   findOne: url => Request.get(url),
 };
 

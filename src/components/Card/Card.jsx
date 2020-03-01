@@ -15,7 +15,11 @@ const CardStyled = styled.div`
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
   justify-self: center;
   margin: 20px;
-  max-width: 400px;
+  width: 400px;
+  @media (max-width: 767px) {
+    max-width: 400px;
+    width: auto;
+  }
 `;
 
 const TitleStyled = styled.div`
@@ -40,7 +44,7 @@ const Card = ({ planet }) => {
       setLoading(false);
     };
     fetchData();
-  }, [planet.residents, planet.films])
+  }, [planet.residents, planet.films]);
 
   if (loading) return <Loading />;
   return (
@@ -57,7 +61,7 @@ const Card = ({ planet }) => {
       <CardData icon="male" title="Residents" value={residents.join(', ')} />
       <CardData icon="film" title="Films" value={films.join(', ')} />
     </CardStyled>
-  )
+  );
 };
 
 // TODO: Tratar quando nenhum residente
