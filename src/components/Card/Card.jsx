@@ -12,11 +12,8 @@ const CardStyled = styled.div`
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
   justify-self: center;
   margin: 20px;
-  width: 400px;
-  @media (max-width: 767px) {
-    max-width: 400px;
-    width: auto;
-  }
+  position: relative;
+  width: 80%;
 `;
 
 const TitleStyled = styled.div`

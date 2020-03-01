@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const ButtonStyled = styled.button`
   border: 2px solid #D7C078;
   display: inline-block;
-  flex-grow: 1;
   margin: 10px 0;
   padding: 10px;
   width: 100px;
@@ -26,6 +25,6 @@ Button.propTypes = {
 Button.defaultProps = {
   callback: () => console.log('defina um callback'),
   value: 'Next',
-}
+};
 
 export default Button;
