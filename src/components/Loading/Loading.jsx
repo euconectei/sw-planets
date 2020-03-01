@@ -12,7 +12,7 @@ const TextStyled = styled.div`
 
 const Loading = () => (
   <>
-    <img src={loadingPlanet} />
+    <img src={loadingPlanet} alt="Loading..." />
     <TextStyled>
       Loading...
     </TextStyled>
