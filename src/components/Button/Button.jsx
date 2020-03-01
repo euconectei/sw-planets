@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ButtonStyled = styled(Link)`
+const ButtonStyled = styled.button`
   border: 2px solid #D7C078;
   display: inline-block;
   flex-grow: 1;
@@ -17,16 +16,16 @@ const ButtonStyled = styled(Link)`
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
 `;
 
-const Button = ({ to, value }) => (<ButtonStyled to={to}>{value}</ButtonStyled>);
+const Button = ({ callback, value }) => (<ButtonStyled onClick={() => callback()}>{value}</ButtonStyled>);
 
 Button.propTypes = {
-  to: PropTypes.string.isRequired,
+  callback: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
 };
 
 Button.defaultProps = {
-  to: "/planets/1",
-  value: "Navegar",
-};
+  callback: () => console.log('defina um callback'),
+  value: 'Next',
+}
 
 export default Button;
