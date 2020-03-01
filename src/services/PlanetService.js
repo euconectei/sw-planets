@@ -7,8 +7,8 @@ const PLANETS_URL = `${BASE_URL}/planets`;
 // TODO: tratar erros
 
 const PlanetService = {
-  findOne: async id => await Request.get(PLANET_URL(id)),
-  findAll: async () => await Request.get(PLANETS_URL),
+  findOne: id => Request.get(PLANET_URL(id)),
+  findAll: () => Request.get(PLANETS_URL),
 };
 
 export default PlanetService;

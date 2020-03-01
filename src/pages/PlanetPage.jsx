@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
+import { useHistory, useParams } from 'react-router-dom';
 import PlanetService from '../services/PlanetService';
-import { CardData, Loading, Button, Card } from '../components';
+import { Loading, Button, Card } from '../components';
 
 import numbers from '../utils/numbers';
 
@@ -11,6 +10,7 @@ import numbers from '../utils/numbers';
 const PlanetPage = () => {
   const [planet, setPlanet] = useState({});
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,18 +22,20 @@ const PlanetPage = () => {
     fetchData();
   }, [id]);
 
+  const nextPlanet = () => {
+    setLoading(true);
+    history.push(`/planets/${numbers.random(61, 1)}`);
+    setLoading(false);
+  }
+
   if (loading) return <Loading />;
 
   return (
     <>
       <Card planet={planet} />
-      <Button to={`/planets/${numbers.random(61, 1)}`} value="Next" />
+      <Button callback={() => nextPlanet()} value="Next" />
     </>
   );
 };
-
-// TODO: Inserir ícone para gravidade
-// TODO: Listar filmes
-// TODO: Listar residentes
 
 export default PlanetPage;
