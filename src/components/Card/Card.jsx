@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import CardData from './CardData';
-import { Loading } from '../';
+import Loading from '../Loading';
 import numbers from '../../utils/numbers';
 import FilmService from '../../services/FilmService';
 import PeopleService from '../../services/PeopleService';
@@ -14,8 +14,9 @@ const CardStyled = styled.div`
   color: #B70000;
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
   justify-self: center;
-  width: 400px;
-  `;
+  margin: 20px;
+  max-width: 400px;
+`;
 
 const TitleStyled = styled.div`
   color: #B70000;
@@ -59,6 +60,8 @@ const Card = ({ planet }) => {
   )
 };
 
+// TODO: Tratar quando nenhum residente
+// TODO: Tratar quando nenhum filme
 // TODO: Inserir ícone para gravidade
 // TODO: Listar filmes
 // TODO: Listar residentes
