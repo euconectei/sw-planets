@@ -3,16 +3,26 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const ButtonStyled = styled.button`
-  border: 2px solid #D7C078;
+  background-color: transparent;
+  border: 2px solid #FFF;
+  border-radius: 5px;
   display: inline-block;
   margin: 10px 0;
-  padding: 10px;
+  padding: 5px;
   width: 100px;
   text-align: center;
   align-self: center;
 
-  color: #B70000;
+  /* color: #B70000; */
+  color: #FFF;
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  outline: none;
+
+  &:hover {
+    background-color: #FFF;
+    color: #000;
+  }
 `;
 
 const Button = ({ callback, value }) => (<ButtonStyled onClick={() => callback()}>{value}</ButtonStyled>);
@@ -20,11 +30,6 @@ const Button = ({ callback, value }) => (<ButtonStyled onClick={() => callback()
 Button.propTypes = {
   callback: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
-};
-
-Button.defaultProps = {
-  callback: () => console.log('defina um callback'),
-  value: 'Next',
 };
 
 export default Button;

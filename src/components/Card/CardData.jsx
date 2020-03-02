@@ -10,10 +10,11 @@ import {
   faFilm,
   faTree,
   faWater,
-  faSmile,
+  faPortrait,
   faSync,
   faUndo,
   faMale,
+  faLongArrowAltDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 fontawesome.library.add(
@@ -22,10 +23,11 @@ fontawesome.library.add(
   faFilm,
   faTree,
   faWater,
-  faSmile,
+  faPortrait,
   faSync,
   faUndo,
   faMale,
+  faLongArrowAltDown,
 );
 
 const GroupStyled = styled.div`
@@ -51,6 +53,7 @@ const IconStyled = styled.div`
 
 const DataStyled = styled.div`
   text-align: left;
+  text-transform: capitalize;
 `;
 
 const CardData = ({ icon, title, value }) => (

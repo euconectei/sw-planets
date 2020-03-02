@@ -7,7 +7,6 @@ import numbers from '../utils/numbers';
 import FilmService from '../services/FilmService';
 import PeopleService from '../services/PeopleService';
 
-
 const PlanetPage = () => {
   const [planet, setPlanet] = useState({
     name: "",
@@ -52,7 +51,7 @@ const PlanetPage = () => {
         front={
           <>
             <Card planet={planet} />
-            <Button callback={() => nextPlanet()} value="Next" />
+            <Button callback={() => nextPlanet()} value={`Next ▸`} />
           </>
         }
       />

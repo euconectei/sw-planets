@@ -33,11 +33,11 @@ const Card = ({ planet }) => (
     <CardData icon="sync" title="Orbital Period" value={numbers.format(planet.orbital_period)} />
     <CardData icon="arrows-alt-h" title="Diameter" value={numbers.format(planet.diameter)} />
     <CardData icon="cloud-sun-rain" title="Climate" value={planet.climate} />
-    <CardData icon="smile" title="Gravity" value={planet.gravity} />
+    <CardData icon="long-arrow-alt-down" title="Gravity" value={planet.gravity} />
     <CardData icon="tree" title="Terrain" value={planet.terrain} />
     <CardData icon="water" title="Surface Water" value={planet.surface_water} />
-    <CardData icon="smile" title="Population" value={numbers.format(planet.population)} />
-    <CardData icon="male" title="Residents" value={planet.residentsName.join(', ')} />
+    <CardData icon="male" title="Population" value={numbers.format(planet.population)} />
+    <CardData icon="portrait" title="Residents" value={planet.residentsName.join(', ')} />
     <CardData icon="film" title="Films" value={planet.filmsTitle.join(', ')} />
   </CardStyled>
 );
