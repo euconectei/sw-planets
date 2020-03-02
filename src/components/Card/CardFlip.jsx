@@ -20,9 +20,10 @@ const CardFlipStyled = styled.div`
   perspective: 1000px;
   
   width: 400px;
-  @media (max-width: 767px) {
-    max-width: 400px;
-    width: auto;
+  @media (max-width: 424px) {
+    /* width: 400px; */
+    max-width: 300px;
+    /* width: auto; */
   }
 `;
 
