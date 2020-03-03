@@ -51,7 +51,7 @@ const PlanetPage = () => {
         front={
           <>
             <Card planet={planet} />
-            <Button callback={() => nextPlanet()} value={`Next ▸`} />
+            <Button callback={() => nextPlanet()} value='Next ▸' />
           </>
         }
       />

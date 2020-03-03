@@ -9,7 +9,7 @@ const ButtonStyled = styled.button`
   display: inline-block;
   margin: 10px 0;
   padding: 5px;
-  width: 100px;
+  width: 125px;
   text-align: center;
   align-self: center;
 
