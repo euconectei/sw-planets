@@ -16,7 +16,7 @@ const TitleGameStyled = styled.div`
 	color: #000;
   display: flex;
   font-family: "Droid Sans", arial, verdana, sans-serif;
-  font-size: 30px;
+  font-size: 48px;
   justify-content: center;
 	line-height: 0.8em;
 	letter-spacing: -0.05em;
@@ -43,15 +43,7 @@ const ScrollEffect = styled.div`
   transform-origin: 50% 100%;
   transform: perspective(300px) rotateX(25deg);
   height: 100%;
-`;
-
-
-
-const ScrollText = styled.div`
-  position: absolute;
-	top: 100%;
-  animation: ${scroll} 100s linear 4s infinite;
-  
+  overflow: hidden;
 
   &:after {
 	position: absolute;
@@ -67,6 +59,17 @@ const ScrollText = styled.div`
 	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
 	pointer-events: none;
 }
+`;
+
+
+
+const ScrollText = styled.div`
+  position: absolute;
+	top: 100%;
+  animation: ${scroll} 90s linear 2s infinite;
+  
+
+  
 `;
 
 const HomePage = () => {
