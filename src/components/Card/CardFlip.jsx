@@ -14,15 +14,14 @@ const CardFlipContainerStyled = styled.div`
 
 const CardFlipStyled = styled.div`
   display: flex;
-  flex-grow: 1;
   position: relative;
   overflow: hidden;
   perspective: 1000px;
   
   width: 400px;
   @media (max-width: 424px) {
-    /* width: 400px; */
-    max-width: 300px;
+    width: 100%;
+    /* max-width: 300px; */
     /* width: auto; */
   }
 `;

@@ -11,9 +11,8 @@ const CardStyled = styled.div`
   color: #BFAA87;
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
   justify-self: center;
-  margin: 20px;
+  margin: 50px 10px 5px;
   position: relative;
-  width: 80%;
 `;
 
 const TitleStyled = styled.div`

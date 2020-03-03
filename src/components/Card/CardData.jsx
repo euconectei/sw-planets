@@ -33,7 +33,7 @@ fontawesome.library.add(
 const GroupStyled = styled.div`
   border: 2px solid #E7250A;
   display: grid;
-  grid-template-columns: 30px auto;
+  grid-template-columns: 90px auto;
   grid-column-gap: 5px;
   padding: 5px;
   margin: 5px;
@@ -45,10 +45,10 @@ const GroupStyled = styled.div`
 `;
 
 const IconStyled = styled.div`
-  height: 20px;
+  /* height: 20px; */
   margin-right: 10px;
   text-align: center;
-  width: 30px;
+  /* width: 30px; */
 `;
 
 const DataStyled = styled.div`
@@ -60,6 +60,8 @@ const CardData = ({ icon, title, value }) => (
   <GroupStyled>
     <IconStyled>
       <FontAwesomeIcon icon={icon} title={title} />
+      <div>{title}</div>
+
     </IconStyled>
     <DataStyled>
       {value}
