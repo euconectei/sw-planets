@@ -85,9 +85,10 @@ const HomePage = () => {
       <ScrollContainer>
         <ScrollEffect>
           <ScrollText>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni molestiae temporibus a cumque aliquid aliquam, quaerat, at sed numquam itaque iusto! Quam magni libero delectus rerum, perspiciatis alias sunt eum.</p>
-            <p>Voluptatibus facilis dignissimos nisi aperiam quaerat! Aut ea, reprehenderit possimus impedit enim nulla temporibus eveniet facilis, cum tenetur, minima voluptate debitis in. Itaque mollitia exercitationem, iure magni recusandae earum magnam?</p>
+            <p>Guerra! A República está desmoronando com os ataques do cruel Lorde Sith, Conde Dookan. Existem heróis em ambos os lados. O Mal está em toda a parte.</p>
+            <p>Numa ação impressionante, o diabólico líder dos andróides, General Grievous, entrou de assalto na capital da República e seqüestrou o Chanceler Palpatine, líder do Senado Galáctico.</p>
+            <p>Enquanto o Exército Separatista tenta escapar da capital sitiada com seu valoroso refém, dois cavaleiros Jedi lideram uma desesperada missão para resgatar o Chanceler cativo...</p>
+            <p>Neste jogo, vamos testar seu conhecimento sobre os planetas para resgatar o Chanceler.</p>
           </ScrollText>
         </ScrollEffect>
       </ScrollContainer>
