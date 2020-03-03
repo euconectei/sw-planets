@@ -28,15 +28,15 @@ const TitleStyled = styled.div`
 const Card = ({ planet }) => (
   <CardStyled>
     <TitleStyled>{(planet.name).toUpperCase()}</TitleStyled>
-    <CardData icon="undo" title="Rotation Period" value={numbers.format(planet.rotation_period)} />
-    <CardData icon="sync" title="Orbital Period" value={numbers.format(planet.orbital_period)} />
-    <CardData icon="arrows-alt-h" title="Diameter" value={numbers.format(planet.diameter)} />
+    {/* <CardData icon="undo" title="Rotation Period" value={numbers.format(planet.rotation_period)} /> */}
+    {/* <CardData icon="sync" title="Orbital Period" value={numbers.format(planet.orbital_period)} /> */}
+    {/* <CardData icon="arrows-alt-h" title="Diameter" value={numbers.format(planet.diameter)} /> */}
     <CardData icon="cloud-sun-rain" title="Climate" value={planet.climate} />
-    <CardData icon="long-arrow-alt-down" title="Gravity" value={planet.gravity} />
+    {/* <CardData icon="long-arrow-alt-down" title="Gravity" value={planet.gravity} /> */}
     <CardData icon="tree" title="Terrain" value={planet.terrain} />
-    <CardData icon="water" title="Surface Water" value={planet.surface_water} />
+    {/* <CardData icon="water" title="Surface Water" value={planet.surface_water} /> */}
     <CardData icon="male" title="Population" value={numbers.format(planet.population)} />
-    <CardData icon="portrait" title="Residents" value={planet.residentsName.join(', ')} />
+    {/* <CardData icon="portrait" title="Residents" value={planet.residentsName.join(', ')} /> */}
     <CardData icon="film" title="Films" value={planet.filmsTitle.join(', ')} />
   </CardStyled>
 );
@@ -44,15 +44,15 @@ const Card = ({ planet }) => (
 Card.propTypes = {
   planet: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    rotation_period: PropTypes.string,
-    orbital_period: PropTypes.string,
-    diameter: PropTypes.string,
+    // rotation_period: PropTypes.string,
+    // orbital_period: PropTypes.string,
+    // diameter: PropTypes.string,
     climate: PropTypes.string,
-    gravity: PropTypes.string,
+    // gravity: PropTypes.string,
     terrain: PropTypes.string,
-    surface_water: PropTypes.string,
+    // surface_water: PropTypes.string,
     population: PropTypes.string,
-    residentsName: PropTypes.arrayOf(PropTypes.string),
+    // residentsName: PropTypes.arrayOf(PropTypes.string),
     filmsTitle: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
 };

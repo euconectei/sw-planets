@@ -30,7 +30,7 @@ const PlanetPage = () => {
     const fetchData = async () => {
       const data = await PlanetService.findOne(id);
       data.filmsTitle = await FilmService.findList(data.films);
-      data.residentsName = await PeopleService.findList(data.residents);
+      // data.residentsName = await PeopleService.findList(data.residents);
       setPlanet(data);
       setLoading(false);
     };
