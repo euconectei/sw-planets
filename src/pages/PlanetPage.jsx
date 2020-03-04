@@ -6,7 +6,21 @@ import { Loading, Button, Card, CardFlip } from '../components';
 
 import numbers from '../utils/numbers';
 import FilmService from '../services/FilmService';
-import PeopleService from '../services/PeopleService';
+// import PeopleService from '../services/PeopleService';
+
+const PlanetPageStyled = styled.div`
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-gap: 10px;
+  width: 100%;
+`;
+
+const GameControl = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+`;
 
 const PlanetPage = () => {
   const [planet, setPlanet] = useState({
@@ -45,29 +59,12 @@ const PlanetPage = () => {
     setLoading(true);
     history.push(`/`);
   };
-  const BackBtn = styled.button`
-    position: absolute;
-    top: 10px;
-    left: 10px;
-
-    background-color: transparent;
-    border: 2px solid #666;
-    border-radius: 5px;
-    display: inline-block;
-    margin: 10px 0;
-    padding: 5px;
-    text-align: center;
-    align-self: center;
-
-    color: #666;
-    font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    outline: none;
-  `;
 
   return (
-    <>
-      <BackBtn onClick={() => backHome()}>◀ Home</BackBtn>
+    <PlanetPageStyled>
+      <GameControl>
+        <Button callback={() => backHome()} value='◀ Home' />
+      </GameControl>
       <CardFlip
         flipped={loading}
         back={
@@ -81,7 +78,7 @@ const PlanetPage = () => {
         }
       />
 
-    </>
+    </PlanetPageStyled>
   );
 };
 

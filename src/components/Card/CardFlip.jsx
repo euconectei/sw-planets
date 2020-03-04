@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const CardFlipContainerStyled = styled.div`
-  display: flex;
-  flex-grow: 1;
   position: relative;
-  text-align: center;
   transform: ${props => (props.flipped) ? 'rotateY(180deg)' : null};
   transform-style: preserve-3d;
   transition: transform 0.8s;
+  height: 100%;
+  width: 100%;
 `;
 
 const CardFlipStyled = styled.div`
@@ -17,12 +16,14 @@ const CardFlipStyled = styled.div`
   position: relative;
   overflow: hidden;
   perspective: 1000px;
+
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
   
   width: 400px;
   @media (max-width: 424px) {
     width: 100%;
-    /* max-width: 300px; */
-    /* width: auto; */
   }
 `;
 
