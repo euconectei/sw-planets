@@ -73,8 +73,13 @@ const HomePage = () => {
   const history = useHistory();
   const music = new Audio(imperialMarch);
   const start = new Audio(lightsaber);
-  music.play();
+  const musicPromise = music.play();
 
+  if (musicPromise !== undefined) {
+    musicPromise
+      .catch(error => console.log({ error }))
+      .then(() => console.log('startou'));
+  }
   const startGame = () => {
     start.play();
     history.push(`/planets/${numbers.random(61, 1)}`);
