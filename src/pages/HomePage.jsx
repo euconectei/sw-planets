@@ -5,6 +5,8 @@ import styled, { keyframes } from 'styled-components';
 import { Button, } from '../components';
 
 import numbers from '../utils/numbers';
+import * as imperialMarch from '../assets/sounds/imperial-march.mp3';
+import * as lightsaber from '../assets/sounds/lightsaber-turn-on.mp3';
 
 const scroll = keyframes`
 	0% { top: 100%; }
@@ -46,36 +48,35 @@ const ScrollEffect = styled.div`
   overflow: hidden;
 
   &:after {
-	position: absolute;
-	content: ' ';
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 60%;
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	pointer-events: none;
-}
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    pointer-events: none;
+  }
 `;
-
-
 
 const ScrollText = styled.div`
   position: absolute;
 	top: 100%;
   animation: ${scroll} 90s linear 2s infinite;
-  
-
-  
 `;
 
 const HomePage = () => {
   const history = useHistory();
+  const music = new Audio(imperialMarch);
+  const start = new Audio(lightsaber);
+  music.play();
 
   const startGame = () => {
+    start.play();
     history.push(`/planets/${numbers.random(61, 1)}`);
   };
 

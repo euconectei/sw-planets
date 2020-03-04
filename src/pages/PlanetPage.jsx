@@ -8,6 +8,9 @@ import numbers from '../utils/numbers';
 import FilmService from '../services/FilmService';
 // import PeopleService from '../services/PeopleService';
 
+import * as computer from '../assets/sounds/computer-sci-fi.mp3';
+import * as chewbacca from '../assets/sounds/chewbacca-wookie.mp3';
+
 const PlanetPageStyled = styled.div`
   display: grid;
   grid-template-rows: 70px 1fr;
@@ -39,14 +42,19 @@ const PlanetPage = () => {
   const [loading, setLoading] = useState(true);
   const history = useHistory();
   const { id } = useParams();
+  const computing = new Audio(computer);
+  const exit = new Audio(chewbacca);
 
   useEffect(() => {
     const fetchData = async () => {
+      computing.play();
       const data = await PlanetService.findOne(id);
       data.filmsTitle = await FilmService.findList(data.films);
       // data.residentsName = await PeopleService.findList(data.residents);
       setPlanet(data);
       setLoading(false);
+      computing.pause();
+      computing.currentTime = 0;
     };
     fetchData();
   }, [id]);
@@ -56,6 +64,7 @@ const PlanetPage = () => {
     history.push(`/planets/${numbers.random(61, 1)}`);
   };
   const backHome = () => {
+    exit.play();
     setLoading(true);
     history.push(`/`);
   };
