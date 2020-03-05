@@ -1,0 +1,28 @@
+---
+name: CardFlip
+menu: Components
+route: /components/cardFlip
+---
+
+import {Playground, Props} from 'docz';
+import CardFlip from './CardFlip';
+import Loading from '../Loading';
+
+## Properties
+
+<Props of={CardFlip} />
+
+## Basic Usage
+
+<Playground>
+  {() => {
+    const [flip, setFlip] = React.useState(false);
+    return (
+      // TODO: Corrigir tamanho da div
+      <div style={{ height: 500, width: 300}}>
+        <button onClick={() => setFlip(!flip)}>Virar card</button>
+        <CardFlip flipped={flip} back={<Loading />} front={<Loading />} />
+      </div>
+    );
+  }}
+</Playground>
