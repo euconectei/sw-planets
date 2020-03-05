@@ -7,6 +7,7 @@ import { Button, } from '../components';
 import numbers from '../utils/numbers';
 import * as imperialMarch from '../assets/sounds/imperial-march.mp3';
 import * as lightsaber from '../assets/sounds/lightsaber-turn-on.mp3';
+import checkBrowser from '../utils/browsers';
 
 const scroll = keyframes`
 	0% { top: 100%; }
@@ -72,16 +73,24 @@ const ScrollText = styled.div`
 const HomePage = () => {
   const history = useHistory();
   const music = new Audio(imperialMarch);
-  const start = new Audio(lightsaber);
-  const musicPromise = music.play();
 
-  if (musicPromise !== undefined) {
-    musicPromise
-      .catch(error => console.log({ error }))
-      .then(() => console.log('startou'));
+  if (checkBrowser() === 'Safari') {
+    // eslint-disable-next-line no-alert
+    alert("Este navegador não suporta autoplay de audio.\nPor favor, clique em qualquer lugar da página para reproduzir o som.");
+    music.pause();
+    music.currentTime = 0;
+    document.addEventListener('mousedown', () => {
+      music.play();
+    }, false);
+  } else {
+    music.play();
   }
+  const start = new Audio(lightsaber);
+
   const startGame = () => {
     start.play();
+    music.pause();
+    music.currentTime = 0;
     history.push(`/planets/${numbers.random(61, 1)}`);
   };
 
