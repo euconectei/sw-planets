@@ -5,7 +5,7 @@ route: /components/button
 ---
 
 import {Playground, Props} from 'docz';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, useHistory} from 'react-router-dom';
 import Button from './Button';
 
 # Button
@@ -19,7 +19,12 @@ Use Button styles for actions in forms, dialogs, and more
 ## Basic Usage
 
 <Playground>
-  <Router>
-    <Button to="/planets/1" value="Next" />
-  </Router>
+  {() => {
+    const onClick = () => false;
+    return (
+      <Router>
+        <Button callback={() => onClick()} value="Next" />
+      </Router>
+    );
+  }}
 </Playground>
