@@ -16,6 +16,8 @@ const ImgStyled = styled.img`
 const TextStyled = styled.div`
   color: #B70000;
   font-family: 'Nova Flat', Helvetica, Arial, sans-serif;
+  text-align: center;
+  width: 128px;
 `;
 
 const Loading = () => (
