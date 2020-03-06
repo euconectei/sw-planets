@@ -1,8 +1,35 @@
 # SW Planets
 
-## Instruções de
+## Instruções de Desenvolvimento
 
 - A versão do NPM e do NodeJS estão especificadas no package.json para atender a necessidade do Heroku.
+
+### Como rodar o jogo
+
+1. Instalar os pacotes do projeto.
+   Dentro da pasta raíz do projeto
+
+```sh
+$ yarn
+// ou
+$ npm install
+```
+
+2. Rodar o projeto:
+
+```sh
+$ yarn start
+// ou
+$ npm start
+```
+
+### Como rodar a documentação
+
+```sh
+$ yarn docz:dev
+// ou
+$ npm run docz:dev
+```
 
 ## Créditos
 

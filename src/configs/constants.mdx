@@ -5,3 +5,21 @@ route: /configs/constants
 ---
 
 # Constants
+
+Constants contain data that is repeated within the project.
+
+## Options
+
+| Const    |        Value         |       Description |
+| -------- | :------------------: | ----------------: |
+| BASE_URL | https://swapi.co/api | Indicate API url. |
+
+## Playground
+
+```js
+const FILMS_URL = `${BASE_URL}/films`;
+
+const FilmService = {
+  findAll: () => Request.get(FILMS_URL),
+};
+```

@@ -5,3 +5,19 @@ route: /utils/numbers
 ---
 
 # Numbers
+
+Handles numbers within the project.
+
+## Options
+
+| Options |         Params         |                  Returns                   |
+| ------- | :--------------------: | :----------------------------------------: |
+| random  | number min, number max |        min < (random number) < max         |
+| format  |         number         | Formatted number in thousands and millions |
+
+## Basic Usage
+
+```js
+const randomNum = numbers.random(1, 40); // eg. 37
+const formattedNum = numbers.format(1234567890.12); // 1,234,567,890.12 eg. 37
+```

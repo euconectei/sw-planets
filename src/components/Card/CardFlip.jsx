@@ -56,8 +56,8 @@ const CardFlipBackStyled = styled.div`
   transition: all 0.8s;
 `;
 
-const CardFlip = ({ front, back, flipped }) => (
-  <CardFlipStyled>
+const CardFlip = ({ front, back, flipped, style }) => (
+  <CardFlipStyled style={{ ...style }}>
     <CardFlipContainerStyled flipped={flipped}>
       <CardFlipFrontStyled flipped={flipped}>
         {front}
@@ -73,6 +73,14 @@ CardFlip.propTypes = {
   back: PropTypes.node.isRequired,
   flipped: PropTypes.bool.isRequired,
   front: PropTypes.node.isRequired,
+  style: PropTypes.object,
+};
+
+CardFlip.defaultProps = {
+  style: {
+    height: 500,
+    width: 300,
+  },
 };
 
 export default CardFlip;

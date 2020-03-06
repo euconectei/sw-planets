@@ -5,3 +5,22 @@ route: /configs/routes
 ---
 
 # Routes
+
+Routes creates the map routes for all pages. Routes has implemented using [React Router][1].
+
+## Basic Usage
+
+```js
+const routes = [
+  {
+    path: '/',
+    component: HomePage,
+  },
+  {
+    path: '/planets/:id',
+    component: PlanetPage,
+  },
+];
+```
+
+[1]: https://reacttraining.com/react-router/web/example/route-config

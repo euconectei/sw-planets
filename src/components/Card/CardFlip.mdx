@@ -8,6 +8,10 @@ import {Playground, Props} from 'docz';
 import CardFlip from './CardFlip';
 import Loading from '../Loading';
 
+# CardFlip
+
+CardFlip allows you to display 2 different components with a rotating effect.
+
 ## Properties
 
 <Props of={CardFlip} />
@@ -18,10 +22,9 @@ import Loading from '../Loading';
   {() => {
     const [flip, setFlip] = React.useState(false);
     return (
-      // TODO: Corrigir tamanho da div
-      <div style={{ height: 500, width: 300}}>
-        <button onClick={() => setFlip(!flip)}>Virar card</button>
-        <CardFlip flipped={flip} back={<Loading />} front={<Loading />} />
+      <div style={{ backgroundColor: '#ccc', height: 500, width: 300}}>
+        <button onClick={() => setFlip(!flip)}>Rotate</button>
+        <CardFlip flipped={flip} back={<Loading />} front="Front" />
       </div>
     );
   }}

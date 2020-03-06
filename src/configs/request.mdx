@@ -5,3 +5,19 @@ route: /configs/request
 ---
 
 # Request
+
+Request creates a base configuration for all requests of the project.
+
+## Options
+
+| Verbs | Params |
+| ----- | :----: |
+| get   |  url   |
+
+## Basic Usage
+
+```js
+const FilmService = {
+  findAll: () => Request.get(FILMS_URL),
+};
+```

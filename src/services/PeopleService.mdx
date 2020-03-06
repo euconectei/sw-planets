@@ -5,3 +5,26 @@ route: /services/peopleService
 ---
 
 # PeopleService
+
+PeopleService call People API.
+
+## Options
+
+| Methods  |       Params       |
+| -------- | :----------------: |
+| findAll  |         -          |
+| findList | ['url_1', 'url_2'] |
+| findOne  |         id         |
+
+## Basic Usage
+
+```js
+const data = await PlanetService.findOne(id);
+/*
+  data.residents = [
+    "https://swapi.co/api/people/57/",
+    "https://swapi.co/api/people/3/",
+  ];
+*/
+const residentsName = await PeopleService.findList(data.residents);
+```

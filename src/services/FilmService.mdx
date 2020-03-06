@@ -5,3 +5,26 @@ route: /services/filmService
 ---
 
 # FilmService
+
+FilmService call film API.
+
+## Options
+
+| Methods  |       Params       |
+| -------- | :----------------: |
+| findAll  |         -          |
+| findList | ['url_1', 'url_2'] |
+| findOne  |         id         |
+
+## Basic Usage
+
+```js
+const data = await PlanetService.findOne(id);
+/*
+  data.films = [
+    "https://swapi.co/api/films/1/",
+    "https://swapi.co/api/films/2/"
+  ];
+*/
+const filmsTitle = await FilmService.findList(data.films);
+```
